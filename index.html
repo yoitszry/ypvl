@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Yupii ❤</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+    body,
+    html {
+      font-family: 'Indie Flower', cursive !important;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(103, 58, 183);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .alert-box {
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border: 2px solid #e91e63; /* Tambahkan border dengan ketebalan 2px dan warna solid hitam (#333) */
+      width: 180px; /* Tentukan lebar alert box */
+      height: 120px; /* Tentukan tinggi alert box */
+    }
+
+    button {
+      padding: 10px 10px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="alert-box">
+      <p id="alert-message">haloo kak yupii!!!</p>
+      <button onclick="closeAlert()">Lanjut</button>
+    </div>
+  </div>
+  <script>
+    let alerts = [
+      "iya aku tau",
+      "kalo hari ini tuh",
+      "hari pemilu",
+      "eh bukan yaa",
+      "maaf yaa",
+      "karena gabisa ngasih hadiah lebih",
+      "gabisa ngasih coklat kek orang orang",
+      "aku cuma bisa ngasih inii"
+    ];
+
+    let currentIndex = 0;
+
+    function closeAlert() {
+      if (currentIndex < alerts.length - 1) {
+        document.getElementById('alert-message').innerText = alerts[currentIndex];
+        currentIndex++;
+      } else {
+        window.location.href = 'next.html'; // Ganti dengan URL halaman baru yang diinginkan
+      }
+    }
+  </script>
+</body>
+
+</html>
